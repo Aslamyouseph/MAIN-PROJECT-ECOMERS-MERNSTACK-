@@ -131,3 +131,40 @@ footer .copyright {
   letter-spacing: 1px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
+/* Ultra-Small Screens (320px and below) */
+@media (max-width: 320px) {
+  /* Reduce footer padding */
+  footer {
+    padding: 5px;
+  }
+
+  /* Ensure lists span full width and are center-aligned */
+  ul {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Further reduce heading font size */
+  ul h1 {
+    font-size: 14px;
+  }
+
+  /* Reduce spacing and font size for list items */
+  ul li {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+
+  /* Adjust social icon sizes for ultra-small screens */
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Minimize font size for copyright text */
+  .copyright {
+    font-size: 10px;
+    padding: 5px;
+  }
+}

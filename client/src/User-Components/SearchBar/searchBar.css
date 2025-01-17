@@ -6,7 +6,7 @@
 }
 
 .search-bar-container .form-control {
-  width: 500px;
+  width: auto;
 }
 .feed-search-bar:hover {
   background-color: #cdc2c2;
