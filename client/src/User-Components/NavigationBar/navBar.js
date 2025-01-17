@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Dropdown from "react-bootstrap/Dropdown";
 import "./navBar.css";
 
 function NavScrollExample() {
@@ -50,6 +51,19 @@ function NavScrollExample() {
               <Nav.Link href="#action1">About Us</Nav.Link>
               <Nav.Link href="#action1">Contact Us</Nav.Link>
             </Nav>
+            <Dropdown>
+              <Dropdown.Toggle
+                variant="success"
+                id="dropdown-basic"
+                className="custom-dropdown"
+              >
+                Account
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>
