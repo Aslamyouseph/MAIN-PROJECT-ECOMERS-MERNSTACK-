@@ -50,20 +50,20 @@ function NavScrollExample() {
               <Nav.Link href="#action1">Services</Nav.Link>
               <Nav.Link href="#action1">About Us</Nav.Link>
               <Nav.Link href="#action1">Contact Us</Nav.Link>
+              <Dropdown className="Account-dropdown">
+                <Dropdown.Toggle
+                  variant="success"
+                  id="dropdown-basic"
+                  className="custom-dropdown"
+                >
+                  Account
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </Nav>
-            <Dropdown>
-              <Dropdown.Toggle
-                variant="success"
-                id="dropdown-basic"
-                className="custom-dropdown"
-              >
-                Account
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>
