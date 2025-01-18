@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Dropdown from "react-bootstrap/Dropdown";
+import lappora from "../../User-images/lappora_icon.png"; // importing the logo image
 import "./navBar.css";
 
 function NavScrollExample() {
@@ -10,7 +11,14 @@ function NavScrollExample() {
     <>
       <Navbar expand="lg" className="bg-body-tertiary ">
         <Container fluid>
-          <Navbar.Brand href="#">LapTopia</Navbar.Brand>
+          <Navbar.Brand href="#">
+            <img
+              src={lappora}
+              alt="Lappora Logo"
+              style={{ height: "70px", width: "auto" }}
+            />
+          </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

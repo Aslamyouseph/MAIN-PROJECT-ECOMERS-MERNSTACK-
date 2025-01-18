@@ -99,7 +99,7 @@ function Footer() {
           </div>
         </div>
         <p className="copyright">
-          <span className="f-logo">LapTopia</span> © 2025 All rights reserved
+          <span className="f-logo">Lappora</span> © 2025 All rights reserved
         </p>
       </footer>
     </div>
