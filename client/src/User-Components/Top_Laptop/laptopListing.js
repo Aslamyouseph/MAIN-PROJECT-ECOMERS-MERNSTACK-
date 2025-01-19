@@ -4,19 +4,10 @@ import laptop1 from "../../User-images/laptop35.webp";
 import laptop2 from "../../User-images/laptop45.webp";
 import laptop3 from "../../User-images/laptop31.webp";
 import laptop4 from "../../User-images/laptop23.webp";
+
 function LaptopListing() {
   return (
     <div>
-      <h1 className="laptop-listing-heading1">
-        <span style={{ color: "red" }}>Lappora</span> : Buying Advice, Tips, and
-        News
-      </h1>
-      <br />
-      <h2 className="laptop-listing-heading2">
-        We benchmark, rate, and review hundreds of PCs each year so we can
-        <br />
-        deliver expert buying advice to help you find the right laptop.
-      </h2>
       <br />
       <br />
       <h5 style={{ paddingLeft: "5%", fontFamily: "inherit", color: "red" }}>
@@ -29,9 +20,11 @@ function LaptopListing() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center", // Center the cards
+          // justifyContent: "center", // Center the cards
           gap: "32px", // Space between rows and columns
           padding: "20px", // Add padding for spacing
+          leftPadding: "5%",
+          rightPadding: "5%",
         }}
       >
         <div
@@ -60,9 +53,11 @@ function LaptopListing() {
             <p>
               The latest in Asus' overflowing Zenbook 14 OLED family skimps a
               bit on the screen resolution but delivers impressive power,
-              battery life, and convenience for $850.
+              battery life, and convenience for $850.The latest in Asus'
+              overflowing Zenbook 14 OLED family skimps a bit on the screen
+              resolution but delivers impressive power, battery life, and
+              convenience for $850.
             </p>
-            <button className="card-btn">See it</button>
           </div>
         </div>
 
@@ -92,9 +87,10 @@ function LaptopListing() {
             <p>
               The 2024 Apple MacBook Air 13-Inch shoehorns more performance into
               its slim chassis, and amps up the external-monitor support and
-              gaming capability.the best ultraportable Mac.
+              gaming capability.the best ultraportable Mac.The latest in Asus'
+              overflowing Zenbook 14 OLED family skimps a bit on the screen
+              resolution but delivers impressive power.
             </p>
-            <button className="card-btn">See it</button>
           </div>
         </div>
 
@@ -125,9 +121,10 @@ function LaptopListing() {
               The Acer Aspire 3 (A315-24P) undercuts the competition with decent
               performance in its base configuration. It’s basic as bricks,
               though, and the higher-end configuration just isn't as competitive
-              laptop.
+              laptop.The latest in Asus' overflowing Zenbook 14 OLED family
+              skimps a bit on the screen resolution but delivers impressive
+              power, battery life, and convenience for $850.
             </p>
-            <button className="card-btn">See it</button>
           </div>
         </div>
 
@@ -157,9 +154,10 @@ function LaptopListing() {
             <p>
               The Asus Zenbook 14X OLED Q420 model is more of a general
               productivity ultraportable than a creator machine, but its sharp
-              build, quick CPU, and brilliant OLED display
+              build, quick CPU, and brilliant OLED display.The latest in Asus'
+              overflowing Zenbook 14 OLED family skimps a bit on the screen
+              resolution but delivers impressive power.
             </p>
-            <button className="card-btn">See it</button>
           </div>
         </div>
       </div>

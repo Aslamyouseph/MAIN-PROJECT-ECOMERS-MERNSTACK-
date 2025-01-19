@@ -41,7 +41,6 @@ function NavScrollExample() {
                 <NavDropdown.Item href="#action3">
                   Budget Laptops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Ultrabooks</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">
                   Student Laptops
                 </NavDropdown.Item>
