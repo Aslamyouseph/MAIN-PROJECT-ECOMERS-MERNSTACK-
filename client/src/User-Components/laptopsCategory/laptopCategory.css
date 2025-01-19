@@ -63,6 +63,11 @@
     align-items: center;
     justify-content: center;
   }
+  h2,
+  p {
+    text-align: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 650px) {
   .card-content {
@@ -71,6 +76,11 @@
     width: 9rem;
     height: 16rem;
     align-items: center;
+    justify-content: center;
+  }
+  h2,
+  p {
+    text-align: center;
     justify-content: center;
   }
 }
@@ -82,7 +92,18 @@
     justify-content: center;
   }
   .card {
-    flex-basis: 100%; /* Each card takes full width */
-    max-width: 100%; /* Prevent any unnecessary width limitation */
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .card-content {
+    padding: 50px;
+    text-align: center;
+  }
+  .card:hover {
+    background-color: red;
+  }
+  .card:hover .card-content h2,
+  .card:hover .card-content p {
+    color: white;
   }
 }

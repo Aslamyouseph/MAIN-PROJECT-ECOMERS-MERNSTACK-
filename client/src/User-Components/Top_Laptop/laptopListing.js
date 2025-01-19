@@ -20,18 +20,19 @@ function LaptopListing() {
         style={{
           display: "flex",
           flexWrap: "wrap",
+          // alignItems: "center",
           // justifyContent: "center", // Center the cards
           gap: "32px", // Space between rows and columns
           padding: "20px", // Add padding for spacing
-          leftPadding: "5%",
-          rightPadding: "5%",
+          leftPadding: "4%",
+          rightPadding: "6%",
         }}
       >
         <div
           className="card"
           style={{
-            width: "19.5rem",
-            height: "30rem",
+            maxWidth: "22rem",
+            minHeight: "30rem",
             boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
             borderRadius: "10px",
             overflow: "hidden",
@@ -64,8 +65,8 @@ function LaptopListing() {
         <div
           className="card"
           style={{
-            width: "19.5rem",
-            height: "30rem",
+            maxWidth: "22rem",
+            minHeight: "30rem",
             boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
             borderRadius: "10px",
             overflow: "hidden",
@@ -97,8 +98,8 @@ function LaptopListing() {
         <div
           className="card"
           style={{
-            width: "19.5rem",
-            height: "30rem",
+            maxWidth: "22rem",
+            minHeight: "30rem",
             boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
             borderRadius: "10px",
             overflow: "hidden",
@@ -131,8 +132,8 @@ function LaptopListing() {
         <div
           className="card"
           style={{
-            width: "19.5rem",
-            height: "30rem",
+            maxWidth: "22rem",
+            minHeight: "30rem",
             boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
             borderRadius: "10px",
             overflow: "hidden",
