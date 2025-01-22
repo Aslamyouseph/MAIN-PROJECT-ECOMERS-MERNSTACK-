@@ -63,7 +63,9 @@ function NavScrollExample() {
               <Nav.Link as={Link} to="/about">
                 About Us
               </Nav.Link>
-              <Nav.Link href="#action1">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/ContactUs">
+                ContactUs
+              </Nav.Link>
               <Dropdown className="Account-dropdown">
                 <Dropdown.Toggle
                   variant="success"
