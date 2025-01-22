@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "./DragableCard.css";
+import "./LatestLaptop.css";
 import laptop1 from "../../User-images/laptop35.webp";
 import laptop2 from "../../User-images/laptop45.webp";
 import laptop3 from "../../User-images/laptop31.webp";
@@ -68,7 +68,9 @@ const ScrollImages = () => {
             color: "red",
           }}
         >
-          <b>Latest Laptop Top Picks :</b>
+          <b>
+            <big>Latest Laptop Top Picks :</big>
+          </b>
         </h5>
         <hr
           style={{

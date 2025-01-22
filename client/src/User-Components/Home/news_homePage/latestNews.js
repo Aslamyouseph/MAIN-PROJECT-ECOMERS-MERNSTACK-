@@ -68,7 +68,9 @@ const LatestNews = () => {
             color: "red",
           }}
         >
-          <b>Latest Laptop News :</b>
+          <b>
+            <big>Latest Laptop News :</big>
+          </b>
         </h5>
         <hr
           style={{

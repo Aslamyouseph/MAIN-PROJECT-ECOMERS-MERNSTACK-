@@ -68,7 +68,9 @@ const HowTo = () => {
             color: "red",
           }}
         >
-          <b>Latest Laptop How-Tos :</b>
+          <b>
+            <big>Latest Laptop How-Tos :</big>
+          </b>
         </h5>
         <hr
           style={{

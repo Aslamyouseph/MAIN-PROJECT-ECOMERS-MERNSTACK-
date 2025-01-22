@@ -89,19 +89,34 @@ function About() {
             <u>Mission</u>
           </h2>
           <p className="paragraph">
-            Lappora's mission is to empower consumers by providing
-            comprehensive, unbiased, and up-to-date information on laptops. We
-            offer expert reviews, detailed comparisons, and tailored buying
-            guides to help users make informed decisions.
+            Lappora's mission is to empower consumers with accurate, unbiased,
+            and comprehensive information about laptops, ensuring they make
+            well-informed purchasing decisions. We strive to offer expert
+            reviews, detailed comparisons, and personalized buying guides,
+            making technology accessible and understandable for everyone. Our
+            commitment is to deliver content rooted in integrity, transparency,
+            and excellence, helping users find the perfect laptop to suit their
+            unique needs. By fostering trust and innovation, we aim to create a
+            reliable resource that simplifies the laptop selection process while
+            keeping our audience informed about the latest trends and
+            advancements in the industry.
           </p>
 
           <h2 style={{ fontFamily: "initial", marginLeft: "10%" }}>
             <u>Vision</u>
           </h2>
           <p className="paragraph">
-            Our vision is to become the leading authority in the laptop
-            industry, recognized for our expertise, integrity, and commitment to
-            quality.
+            Our vision is to redefine how people explore and purchase laptops by
+            becoming the most trusted and innovative authority in the laptop
+            industry. We aspire to set the benchmark for quality, expertise, and
+            transparency, offering a platform that blends cutting-edge
+            technology with human-centric insights. At Lappora, we envision a
+            world where every consumer, regardless of their technical knowledge,
+            can confidently choose a laptop that perfectly aligns with their
+            needs. By fostering trust, integrity, and a commitment to
+            excellence, we aim to inspire a global community of informed and
+            empowered tech enthusiasts while contributing to the advancement of
+            sustainable and user-focused innovations in the laptop market.
           </p>
         </div>
       </div>

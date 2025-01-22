@@ -5,7 +5,7 @@ import SearchBar from "../../User-Components/Home/SearchBar/searchBar";
 import ImageSlider from "../../User-Components/Home/ImageSlider/imageSlider";
 import Top_Laptop from "../../User-Components/Home/Top_Laptop/laptopListing";
 import LaptopCategory from "../../User-Components/Home/laptopsCategory/laptopCategory";
-import DragableCard from "../../User-Components/Home/dragableCard/DragableCard";
+import LatestLaptop from "../../User-Components/Home/LatestLaptopes/LatestLaptop";
 import LatestNews from "../../User-Components/Home/news_homePage/latestNews";
 import HowTo from "../../User-Components/Home/howToKnowpage/howTo";
 function home() {
@@ -16,7 +16,7 @@ function home() {
       <ImageSlider /> {/*This is used to import the Image slider   */}
       <LaptopCategory /> {/* This id used to import the Laptop category */}
       <Top_Laptop /> {/*This is used to import the Body */}
-      <DragableCard /> {/*This is used to import the dragableCard*/}
+      <LatestLaptop /> {/*This is used to import the dragableCard*/}
       <LatestNews /> {/*This is used to import the latestNews*/}
       <HowTo /> {/*This is used to import the HowTo*/}
       <Footer /> {/*This is used to import the Footer   */}

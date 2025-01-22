@@ -12,13 +12,13 @@ function NavScrollExample() {
     <>
       <Navbar expand="lg" className="bg-body-tertiary ">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Nav.Link as={Link} to="/">
             <img
               src={lappora}
               alt="Lappora Logo"
               style={{ height: "70px", width: "auto" }}
             />
-          </Navbar.Brand>
+          </Nav.Link>
 
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -56,7 +56,9 @@ function NavScrollExample() {
               <Nav.Link href="#action1">Cart Section</Nav.Link>
               <Nav.Link href="#action1">Order Section</Nav.Link>
               <Nav.Link href="#action1">News</Nav.Link>
-              <Nav.Link href="#action1">How TO</Nav.Link>
+              <Nav.Link as={Link} to="/HowToDO">
+                How To
+              </Nav.Link>
               <Nav.Link href="#action1">Services</Nav.Link>
               <Nav.Link as={Link} to="/about">
                 About Us
