@@ -5,6 +5,8 @@ import Home from "./User-Components/User-pages/home"; // This is used to import 
 import About from "./User-Components/User-pages/AboutUs"; // This is used to import the About us page from the pages folder
 import HowToDO from "./User-Components/User-pages/HowToDO";
 import ContactUs from "./User-Components/User-pages/contactUs";
+import News from "./User-Components/User-pages/News";
+import Services from "./User-Components/User-pages/Services";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -28,6 +30,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/HowToDO" element={<HowToDO />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/service" element={<Services />} />
       </Routes>
     </div>
   );

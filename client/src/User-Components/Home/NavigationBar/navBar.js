@@ -55,11 +55,15 @@ function NavScrollExample() {
 
               <Nav.Link href="#action1">Cart Section</Nav.Link>
               <Nav.Link href="#action1">Order Section</Nav.Link>
-              <Nav.Link href="#action1">News</Nav.Link>
+              <Nav.Link as={Link} to="/news">
+                News
+              </Nav.Link>
               <Nav.Link as={Link} to="/HowToDO">
                 How To
               </Nav.Link>
-              <Nav.Link href="#action1">Services</Nav.Link>
+              <Nav.Link as={Link} to="/service">
+                Services
+              </Nav.Link>
               <Nav.Link as={Link} to="/about">
                 About Us
               </Nav.Link>

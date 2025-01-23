@@ -6,8 +6,13 @@ function HowToDo() {
     <div>
       <br />
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
-        <b>How-To</b>
+        <b>
+          <big>How-To</big>
+        </b>
       </h1>
+      <h4 style={{ textAlign: "center" }}>
+        How do we make the unknown familiar.
+      </h4>
       <br />
       <h5
         style={{
@@ -146,6 +151,7 @@ function HowToDo() {
           </div>
         </div>
       </div>
+      <br />
     </div>
   );
 }
