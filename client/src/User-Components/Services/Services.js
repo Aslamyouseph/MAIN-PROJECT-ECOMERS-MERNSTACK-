@@ -1,5 +1,6 @@
 import React from "react";
 import "./Services.css";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 function Services() {
   return (
     <div>
@@ -17,6 +18,38 @@ function Services() {
         Empowering you with expert advice and hassle-free shopping
       </h5>
       <hr style={{ marginLeft: "5%", marginRight: "5%" }} />
+      <br />
+      <div className="main-ServicesContainer">
+        <div className="service-container">
+          <h3 className="service-heading">Your Orders</h3>
+          <p style={{ textAlign: "center" }}>Track your orders in real-time</p>
+        </div>
+        <div className="service-container">
+          <h3 className="service-heading">Return and Refunds</h3>
+          <p style={{ textAlign: "center" }}>Return or exchange your product</p>
+        </div>
+        <div className="service-container">
+          <h3 className="service-heading">Payment Settings</h3>
+          <p style={{ textAlign: "center" }}>Know about Payment methods</p>
+        </div>{" "}
+        <div className="service-container">
+          <h3 className="service-heading">Manage Addresses</h3>
+          <p style={{ textAlign: "center" }}>Update your address</p>
+        </div>
+        <div className="service-container">
+          <h3 className="service-heading">Account Settings</h3>
+          <p style={{ textAlign: "center" }}>Change your name,email </p>
+        </div>
+        <div className="service-container">
+          <Link to="/news" style={{ color: "inherit", textDecoration: "none" }}>
+            <h3 className="service-heading">Latest News</h3>
+            <p style={{ textAlign: "center", textDecoration: "none" }}>
+              Know the latest tech news and updates
+            </p>
+          </Link>
+        </div>
+      </div>
+      <br />
       <br />
     </div>
   );

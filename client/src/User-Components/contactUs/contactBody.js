@@ -72,7 +72,7 @@ function ContactUs() {
       </h2>
       <br />
       <p className="paragraph">
-        LapTopia 114 Fifth Avenue,
+        Lappora 114 Fifth Avenue,
         <br /> H.NO. B-23 F/F BLOCK-B, <br />
         SECTOR-12, <br />
         5th Floor Techno Park kerala india, NY 10011

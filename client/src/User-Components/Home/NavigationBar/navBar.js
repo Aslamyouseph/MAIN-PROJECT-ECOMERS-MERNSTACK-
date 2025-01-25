@@ -35,7 +35,7 @@ function NavScrollExample() {
                 id="navbarScrollingDropdown"
                 className="custom-dropdown"
               >
-                <NavDropdown.Item href="#action1">
+                <NavDropdown.Item as={Link} to="/gamingLaptops">
                   Gaming Laptops
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action2">
@@ -52,7 +52,6 @@ function NavScrollExample() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action7">2 in one</NavDropdown.Item>
               </NavDropdown>
-
               <Nav.Link href="#action1">Cart Section</Nav.Link>
               <Nav.Link href="#action1">Order Section</Nav.Link>
               <Nav.Link as={Link} to="/news">

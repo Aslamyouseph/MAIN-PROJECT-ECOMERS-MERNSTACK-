@@ -7,45 +7,51 @@ function Footer() {
       <footer>
         <div className="up-section">
           <ul>
-            <h1>Company</h1>
+            <h1>Quick Links</h1>
             <li>
-              <a href="#">Teams</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#">News</a>
+            </li>
+            <li>
+              <a href="#">How To</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
             </li>
             <li>
               <a href="#">Contact Us</a>
             </li>
-            <li>
-              <a href="#">Support</a>
-            </li>
           </ul>
           <ul>
-            <h1>About</h1>
+            <h1>Services</h1>
             <li>
-              <a href="#">Company</a>
+              <a href="#">Latest News</a>
             </li>
             <li>
-              <a href="#">Location</a>
+              <a href="#">Return & Refunds policies</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#">Account</a>
             </li>
             <li>
-              <a href="#">Our Services</a>
+              <a href="#">Payment Methods</a>
             </li>
           </ul>
           <ul>
             <h1>Contact Us</h1>
             <li>
-              <p>+1 123 456 7890</p>
+              <p>Lappora 114 Fifth Avenue</p>
             </li>
             <li>
-              <p>House #215, Street 5</p>
+              <p>H.NO. B-23 F/F BLOCK-B</p>
             </li>
             <li>
-              <p>Washington, DC</p>
+              <p>SECTOR-12 , 5th Floor </p>
+            </li>
+            <li>
+              <p>Techno Park kerala india</p>
             </li>
           </ul>
         </div>
@@ -53,31 +59,43 @@ function Footer() {
           <ul>
             <h1>Explore</h1>
             <li>
-              <a href="#">Collections</a>
+              <a href="#">Gaming Laptops</a>
             </li>
             <li>
-              <a href="#">Item Detail</a>
+              <a href="#">Business Laptops</a>
             </li>
             <li>
-              <a href="#">Collectibles</a>
+              <a href="#">Budget Laptops</a>
             </li>
             <li>
-              <a href="#">Community</a>
+              <a href="#">Student Laptops</a>
+            </li>
+            <li>
+              <a href="#">Who need tablets</a>
+            </li>
+            <li>
+              <a href="#">2 in one</a>
             </li>
           </ul>
           <ul>
-            <h1>Support</h1>
+            <h1>Brands</h1>
             <li>
-              <a href="#">Settings</a>
+              <a href="#">HP</a>
             </li>
             <li>
-              <a href="#">Privacy</a>
+              <a href="#">Dell</a>
             </li>
             <li>
-              <a href="#">Help</a>
+              <a href="#">Acer</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#">Lenovo</a>
+            </li>{" "}
+            <li>
+              <a href="#">Asus</a>
+            </li>{" "}
+            <li>
+              <a href="#">Apple</a>
             </li>
           </ul>
           <div className="social">

@@ -7,6 +7,7 @@ import HowToDO from "./User-Components/User-pages/HowToDO";
 import ContactUs from "./User-Components/User-pages/contactUs";
 import News from "./User-Components/User-pages/News";
 import Services from "./User-Components/User-pages/Services";
+import GamingLaptop from "./User-Components/User-pages/GamingLaptops";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -32,6 +33,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/news" element={<News />} />
         <Route path="/service" element={<Services />} />
+        <Route path="/gamingLaptops" element={<GamingLaptop />} />
       </Routes>
     </div>
   );
