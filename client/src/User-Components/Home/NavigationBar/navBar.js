@@ -38,19 +38,21 @@ function NavScrollExample() {
                 <NavDropdown.Item as={Link} to="/gamingLaptops">
                   Gaming Laptops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action2">
+                <NavDropdown.Item as={Link} to="/BusinessLaptops">
                   Business Laptops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action3">
+                <NavDropdown.Item as={Link} to="/BudgetLaptops">
                   Budget Laptops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item as={Link} to="/StudentLaptops">
                   Student Laptops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action6">
+                <NavDropdown.Item as={Link} to="/Tablets">
                   Who need tablets
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action7">2 in one</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/TwoInOne">
+                  2 in one
+                </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#action1">Cart Section</Nav.Link>
               <Nav.Link href="#action1">Order Section</Nav.Link>

@@ -8,6 +8,11 @@ import ContactUs from "./User-Components/User-pages/contactUs";
 import News from "./User-Components/User-pages/News";
 import Services from "./User-Components/User-pages/Services";
 import GamingLaptop from "./User-Components/User-pages/GamingLaptops";
+import BusinesLaptops from "./User-Components/User-pages/BusinesLaptops";
+import BudgetLaptos from "./User-Components/User-pages/BudgetLaptos";
+import StudentLaptop from "./User-Components/User-pages/StudentsLaptops";
+import Tablets from "./User-Components/User-pages/Tablets";
+import TwoInOne from "./User-Components/User-pages/TwoInOne";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -34,6 +39,11 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/service" element={<Services />} />
         <Route path="/gamingLaptops" element={<GamingLaptop />} />
+        <Route path="/BusinessLaptops" element={<BusinesLaptops />} />
+        <Route path="/BudgetLaptops" element={<BudgetLaptos />} />
+        <Route path="/StudentLaptops" element={<StudentLaptop />} />
+        <Route path="/Tablets" element={<Tablets />} />
+        <Route path="/TwoInOne" element={<TwoInOne />} />
       </Routes>
     </div>
   );

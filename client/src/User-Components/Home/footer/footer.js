@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom"; // This is used to enable routing in react example (http://localhost:3000/page1)
 
 function Footer() {
   return (
@@ -9,34 +10,34 @@ function Footer() {
           <ul>
             <h1>Quick Links</h1>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">News</a>
+              <Link to="/news">News</Link>
             </li>
             <li>
-              <a href="#">How To</a>
+              <Link to="/HowToDO">How To</Link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <Link to="/ContactUs">Contact Us</Link>
             </li>
           </ul>
           <ul>
             <h1>Services</h1>
             <li>
-              <a href="#">Latest News</a>
+              <Link to="/news">Latest News</Link>
             </li>
             <li>
-              <a href="#">Return & Refunds policies</a>
+              <Link to="/">Return & Refunds policies</Link>
             </li>
             <li>
-              <a href="#">Account</a>
+              <Link to="/">Account</Link>
             </li>
             <li>
-              <a href="#">Payment Methods</a>
+              <Link to="/">Payment Methods</Link>
             </li>
           </ul>
           <ul>
@@ -59,43 +60,51 @@ function Footer() {
           <ul>
             <h1>Explore</h1>
             <li>
-              <a href="#">Gaming Laptops</a>
+              <Link to="/gamingLaptops">Gaming Laptops</Link>
             </li>
             <li>
-              <a href="#">Business Laptops</a>
+              <Link to="/BusinessLaptops">Business Laptops</Link>
             </li>
             <li>
-              <a href="#">Budget Laptops</a>
+              <Link to="/BudgetLaptops">Budget Laptops</Link>
             </li>
             <li>
-              <a href="#">Student Laptops</a>
+              <Link to="/StudentLaptops">Student Laptops</Link>
             </li>
             <li>
-              <a href="#">Who need tablets</a>
+              <Link to="/Tablets">Who need tablets</Link>
             </li>
             <li>
-              <a href="#">2 in one</a>
+              <Link to="/TwoInOne">2 in one</Link>
             </li>
           </ul>
           <ul>
             <h1>Brands</h1>
             <li>
-              <a href="#">HP</a>
+              <a href="https://www.hp.com/in-en/shop/?optly_qa_cookie=optly_hp_test&gclid=SEM&gclsrc=3p.ds&msclkid=e51dfcb45c4d1ebe79439a1e7d0b9088&utm_source=bing&utm_medium=cpc&utm_campaign=IN%20-%20HPCOM%7CHPStore%7CHHO%7CHome%26HomeOffice%7CIN%7CBrand%7CExact%7CEN%7C%20(Always-On)&utm_term=h%20h%20p&utm_content=Generic%20EM">
+                HP
+              </a>
             </li>
             <li>
-              <a href="#">Dell</a>
+              <a href="https://www.dell.com/en-in?msockid=11fb50993a826b96385b445f3bdc6a23">
+                Dell
+              </a>
             </li>
             <li>
-              <a href="#">Acer</a>
+              <a href="https://store.acer.com/en-in/">Acer</a>
             </li>
             <li>
-              <a href="#">Lenovo</a>
+              <a href="https://www.lenovo.com/in/en/d/deals/?sortBy=priceUp&visibleDatas=4376%3ALOQ%2CLegion%2CIdeaPad%2CYoga&cid=in:sem:ndop2c&msclkid=9d036e69a0141a7b2d8708c381b62a8c&utm_source=bing&utm_medium=cpc&utm_campaign=CN~ECOMM_CONS_PUB_MTM_BING_TEXT_BR_EXACT_CCFNET_IN-AN~ECOMM-SB~CONS-SC~PUB-YR~NONE-MK~IN-AG~8651&utm_term=lenovo%20official%20website&utm_content=Core%20Brand">
+                Lenovo
+              </a>
             </li>{" "}
             <li>
-              <a href="#">Asus</a>
+              <a href="https://www.asus.com/us/content/nuc-overview/?utm_source=gads&utm_medium=sem&utm_campaign=2024Q2-MiniPC-NUC14Pro&msclkid=9fba0183a6151c7a0245672986b77d87&utm_term=gaming%20mini%20pc&utm_content=US%20%7C%202024%20Q2%20%7C%20Mini%20PC%7C%20NUC%20%7C%20SEM">
+                Asus
+              </a>
             </li>{" "}
             <li>
-              <a href="#">Apple</a>
+              <a href="https://www.apple.com/in/ipad-pro/">Apple</a>
             </li>
           </ul>
           <div className="social">

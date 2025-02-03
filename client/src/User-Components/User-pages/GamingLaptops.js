@@ -8,7 +8,7 @@ function gamingLaptops() {
     <div>
       <NavBar /> {/*This is used to import the navigation bar  */}
       <SearchBar /> {/*This is used to import the Search bar  */}{" "}
-      {/*This is used to import the GammingLaptopes laptopes page*/}
+      {/*This is used to import the GammingLaptopes laptops page*/}
       <GamingLaptops />
       <Footer /> {/*This is used to import the Footer   */}
     </div>
