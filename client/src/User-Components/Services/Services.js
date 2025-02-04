@@ -21,8 +21,15 @@ function Services() {
       <br />
       <div className="main-ServicesContainer">
         <div className="service-container">
-          <h3 className="service-heading">Your Orders</h3>
-          <p style={{ textAlign: "center" }}>Track your orders in real-time</p>
+          <Link
+            to="/OrderPage"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <h3 className="service-heading">Your Orders</h3>
+            <p style={{ textAlign: "center" }}>
+              Track your orders in real-time
+            </p>
+          </Link>
         </div>
         <div className="service-container">
           <h3 className="service-heading">Return and Refunds</h3>
