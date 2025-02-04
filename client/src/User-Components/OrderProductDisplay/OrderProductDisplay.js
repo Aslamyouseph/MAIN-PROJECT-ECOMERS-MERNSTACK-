@@ -20,7 +20,7 @@ function OrderProductDisplay() {
               </h5>
               <h4 className="order-product-price">
                 <span>&#x20B9;</span> 1,500{" "}
-                <span className="payment-method text-muted">via (COD)</span>
+                <span className="payment-method text-muted">(COD)</span>
               </h4>
               <p className="text-muted">Qt: 1 Pair</p>
             </div>
