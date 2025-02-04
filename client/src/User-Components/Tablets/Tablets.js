@@ -52,23 +52,9 @@ function Tablets() {
                       </a>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <div className="rating">
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                      </div>
+                      <a href="#" className="btn btn-success">
+                        Add TO Cart
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -102,23 +88,9 @@ function Tablets() {
                       </a>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <div className="rating">
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                      </div>
+                      <a href="#" className="btn btn-success">
+                        Add TO Cart
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -152,24 +124,11 @@ function Tablets() {
                       </a>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <div className="rating">
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                        <label>
-                          <i className="fa fa-star text-primary"></i>
-                        </label>
-                      </div>
+                      <a href="#" className="btn btn-success">
+                        Add TO Cart
+                      </a>
                     </div>
+                    <div className="col-md-6 col-sm-6 col-xs-6"></div>
                   </div>
                 </div>
               </div>

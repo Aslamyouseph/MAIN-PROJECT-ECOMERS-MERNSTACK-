@@ -86,15 +86,6 @@
   background: #218838;
 }
 
-.laptop-container .rating label {
-  margin-top: 0;
-  color: #fa9442;
-}
-
-.laptop-container .rating .fa-star.text-primary {
-  color: #3276b1;
-}
-
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .laptop-container .product-content {
