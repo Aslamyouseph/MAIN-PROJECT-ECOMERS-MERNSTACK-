@@ -55,7 +55,9 @@ function NavScrollExample() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#action1">Cart Section</Nav.Link>
-              <Nav.Link href="#action1">Order Section</Nav.Link>
+              <Nav.Link as={Link} to="/OrderPage">
+                Order Section
+              </Nav.Link>
               <Nav.Link as={Link} to="/news">
                 News
               </Nav.Link>
