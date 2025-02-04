@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import $ from "jquery";
 import "datatables.net-bs5";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function OrderPage() {
   useEffect(() => {
@@ -18,7 +19,7 @@ function OrderPage() {
       });
     }, 100); // Ensuring DOM is ready
   }, []);
-
+  const navigate = useNavigate();
   return (
     <div className="container mt-4">
       <br />
@@ -55,7 +56,12 @@ function OrderPage() {
             <td>UPI</td>
             <td>Delivered</td>
             <td>
-              <button className="btn btn-primary btn-sm">View</button>
+              <button
+                onClick={() => navigate("/OrderProductDisplay")}
+                className="btn btn-primary btn-sm"
+              >
+                View
+              </button>
             </td>
           </tr>
           <tr>
@@ -69,7 +75,12 @@ function OrderPage() {
             <td>COD</td>
             <td>Pending</td>
             <td>
-              <button className="btn btn-primary btn-sm">View</button>
+              <button
+                onClick={() => navigate("/OrderProductDisplay")}
+                className="btn btn-primary btn-sm"
+              >
+                View
+              </button>
             </td>
           </tr>
         </tbody>
