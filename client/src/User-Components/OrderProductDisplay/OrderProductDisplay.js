@@ -13,11 +13,11 @@ function OrderProductDisplay() {
             </div>
             <div className="product-detail">
               <p className="text-muted">Order placed on: 12-01-2023</p>
-              <h5 className="name">
+              <h3 className="name">
                 <a href="#">
                   Lenovo Legion 5 <span>HP</span>
                 </a>
-              </h5>
+              </h3>
               <h4 className="order-product-price">
                 <span>&#x20B9;</span> 1,500{" "}
                 <span className="payment-method text-muted">(COD)</span>

@@ -33,9 +33,9 @@ container .product-content {
   width: 60%; /* Adjusted to align with the image */
 }
 
-.laptop-container .product-detail h5 a {
+.laptop-container .product-detail h3 a {
   color: #2f383d;
-  font-size: 18px;
+  font-size: 30px;
   text-decoration: none;
 }
 
