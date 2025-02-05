@@ -1,0 +1,121 @@
+/* Main container */
+.order-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.order-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form layout */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row for columns */
+.order-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Column */
+.order-column {
+  flex: 1;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card style */
+.shipping-card,
+.billing-card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Labels */
+.radio-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input fields */
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Radio button */
+.radio-input {
+  width: 18px;
+  height: 18px;
+}
+
+/* Submit button */
+.order-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.order-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-row {
+    flex-direction: column;
+  }
+}

@@ -17,6 +17,7 @@ import Order_page from "./User-Components/User-pages/Order_page";
 import OrderProductDisplay from "./User-Components/User-pages/OrderProductDisplay";
 import ProductDetails from "./User-Components/User-pages/productDetails";
 import Cart from "./User-Components/User-pages/Cart";
+import PlaceOrder from "./User-Components/User-pages/PlaceOrder";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -52,6 +53,7 @@ function App() {
         <Route path="/OrderProductDisplay" element={<OrderProductDisplay />} />
         <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/PlaceOrder" element={<PlaceOrder />} />
       </Routes>
     </div>
   );

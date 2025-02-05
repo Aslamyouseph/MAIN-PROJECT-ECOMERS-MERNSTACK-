@@ -1,8 +1,11 @@
 import React from "react";
 import "./Cart.css";
 import image from "../User-images/laptop28.webp";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function Cart() {
+  const navigate = useNavigate();
+
   return (
     <div className="cart-container">
       <section>
@@ -90,9 +93,9 @@ function Cart() {
             <h3 className="cart-total">
               <u>Total Price: ₹10,000</u>
             </h3>
-            <a href="/place-order" className="cart-order-btn">
+            <Link to="/PlaceOrder" className="cart-order-btn">
               <b>Place Order</b>
-            </a>
+            </Link>
           </div>
         </div>
         <br />
