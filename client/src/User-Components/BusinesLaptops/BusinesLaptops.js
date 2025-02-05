@@ -1,6 +1,8 @@
 import React from "react";
 import "./BusinesLaptop.css";
 import image1 from "../User-images/laptop35.webp";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+
 function BusinesLaptops() {
   return (
     <div className="laptop-container">
@@ -44,9 +46,9 @@ function BusinesLaptops() {
               <div className="product-info smart-form">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" className="btn btn-success">
+                    <Link to="/ProductDetails" className="btn btn-success">
                       View More
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <a href="#" className="btn btn-success">
@@ -80,9 +82,9 @@ function BusinesLaptops() {
               <div className="product-info smart-form">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" className="btn btn-success">
+                    <Link to="/ProductDetails" className="btn btn-success">
                       View More
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <a href="#" className="btn btn-success">
@@ -116,9 +118,9 @@ function BusinesLaptops() {
               <div className="product-info smart-form">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" className="btn btn-success">
+                    <Link to="/ProductDetails" className="btn btn-success">
                       View More
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <a href="#" className="btn btn-success">

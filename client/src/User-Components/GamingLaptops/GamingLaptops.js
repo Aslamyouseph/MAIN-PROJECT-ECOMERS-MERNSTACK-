@@ -83,9 +83,9 @@ const GamingLaptops = () => {
               <div className="product-info smart-form">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" className="btn btn-success">
+                    <Link to="/ProductDetails" className="btn btn-success">
                       View More
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <a href="#" className="btn btn-success">
@@ -119,9 +119,9 @@ const GamingLaptops = () => {
               <div className="product-info smart-form">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" className="btn btn-success">
+                    <Link to="/ProductDetails" className="btn btn-success">
                       View More
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <a href="#" className="btn btn-success">

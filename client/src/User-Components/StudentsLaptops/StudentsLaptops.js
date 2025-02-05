@@ -1,6 +1,8 @@
 import React from "react";
 import "./StudentsLaptops.css";
 import image1 from "../User-images/laptop35.webp";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+
 function StudentsLaptops() {
   return (
     <div>
@@ -46,9 +48,9 @@ function StudentsLaptops() {
                 <div className="product-info smart-form">
                   <div className="row">
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <a href="#" className="btn btn-success">
+                      <Link to="/ProductDetails" className="btn btn-success">
                         View More
-                      </a>
+                      </Link>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
                       <a href="#" className="btn btn-success">
@@ -82,9 +84,9 @@ function StudentsLaptops() {
                 <div className="product-info smart-form">
                   <div className="row">
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <a href="#" className="btn btn-success">
+                      <Link to="/ProductDetails" className="btn btn-success">
                         View More
-                      </a>
+                      </Link>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
                       <a href="#" className="btn btn-success">
@@ -118,9 +120,9 @@ function StudentsLaptops() {
                 <div className="product-info smart-form">
                   <div className="row">
                     <div className="col-md-6 col-sm-6 col-xs-6">
-                      <a href="#" className="btn btn-success">
+                      <Link to="/ProductDetails" className="btn btn-success">
                         View More
-                      </a>
+                      </Link>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
                       <a href="#" className="btn btn-success">
