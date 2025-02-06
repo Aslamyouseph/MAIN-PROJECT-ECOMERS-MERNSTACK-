@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.css"; // Import the CSS file
+import { Routes, Route, Link, useNavigate } from "react-router-dom"; // This is used to enable routing.
 
 function SignUp() {
   return (
@@ -18,7 +19,7 @@ function SignUp() {
           <input type="password" placeholder="Confirm your password" required />
 
           <div className="login-link">
-            <a>Already have an account? Login</a>
+            <Link to="/login">Already have an account? Login</Link>
           </div>
 
           <button type="submit">Register</button>
