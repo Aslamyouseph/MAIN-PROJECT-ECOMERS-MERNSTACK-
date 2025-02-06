@@ -36,12 +36,22 @@ function Services() {
           <p style={{ textAlign: "center" }}>Return or exchange your product</p>
         </div>
         <div className="service-container">
-          <h3 className="service-heading">Payment Settings</h3>
-          <p style={{ textAlign: "center" }}>Know about Payment methods</p>
+          <Link
+            to="/PlaceOrder"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <h3 className="service-heading">Payment Settings</h3>
+            <p style={{ textAlign: "center" }}>Know about Payment methods</p>
+          </Link>
         </div>{" "}
         <div className="service-container">
-          <h3 className="service-heading">Manage Addresses</h3>
-          <p style={{ textAlign: "center" }}>Update your address</p>
+          <Link
+            to="/HowToDO"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <h3 className="service-heading">How To Do</h3>
+            <p style={{ textAlign: "center" }}>Solve the technical issues</p>
+          </Link>
         </div>
         <div className="service-container">
           <h3 className="service-heading">Account Settings</h3>
