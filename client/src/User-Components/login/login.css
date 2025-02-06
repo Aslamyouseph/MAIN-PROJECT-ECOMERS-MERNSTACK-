@@ -86,3 +86,11 @@
 .login-container .signUp-link:hover {
   color: #8e44ad;
 }
+
+@media (max-width: 1000px) {
+  .login-container {
+    max-width: 100%;
+    margin-left: auto;
+    text-align: center;
+  }
+}

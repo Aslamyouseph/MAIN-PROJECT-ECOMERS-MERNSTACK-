@@ -84,7 +84,9 @@ function NavScrollExample() {
                   Account
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/login">
+                    Login
+                  </Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
