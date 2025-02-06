@@ -21,13 +21,19 @@ function PlaceOrder({ user, totalAmount }) {
 
   return (
     <div className="order-container">
-      <h2 className="order-header">Checkout</h2>
+      <h2 className="order-header" style={{ color: "red" }}>
+        Checkout
+      </h2>
       <form id="order-form" className="order-form" onSubmit={handleSubmit}>
         <div className="order-row">
           {/* Delivery Details */}
           <div className="order-column">
             <div className="shipping-card">
-              <h4 className="card-title">Delivery Details</h4>
+              <h4 className="card-title" style={{ color: "red" }}>
+                Delivery Details
+              </h4>
+              <br />
+              <br />
               <input type="hidden" name="userId" value={user?._id} />
               <div className="form-group">
                 <label htmlFor="address">Address</label>
@@ -83,18 +89,19 @@ function PlaceOrder({ user, totalAmount }) {
           {/* Payment Details */}
           <div className="order-column">
             <div className="billing-card">
-              <h4 className="card-title">Payment Details</h4>
+              <h4 className="card-title" style={{ color: "red" }}>
+                Total Amount :<span style={{ color: "green" }}>RS:-1000 </span>{" "}
+              </h4>
               <br />
+
               <div className="form-group">
-                <label>
+                <br />
+                <label style={{ color: "black" }}>
                   <b>
-                    <u>Total Amount: {totalAmount} RS:-1000</u>
+                    <u>Payment Method</u>
                   </b>
                 </label>
-              </div>
-              <div className="form-group">
-                <label>Payment Method</label>
-
+                <br />
                 <div className="radio-group">
                   <input
                     className="radio-input"
