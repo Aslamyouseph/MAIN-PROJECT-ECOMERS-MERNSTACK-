@@ -18,6 +18,7 @@ import OrderProductDisplay from "./User-Components/User-pages/OrderProductDispla
 import ProductDetails from "./User-Components/User-pages/productDetails";
 import Cart from "./User-Components/User-pages/Cart";
 import PlaceOrder from "./User-Components/User-pages/PlaceOrder";
+import SignUp from "./User-Components/User-pages/SignUp";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -54,6 +55,7 @@ function App() {
         <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/PlaceOrder" element={<PlaceOrder />} />
+        <Route path="/SignUp" element={<SignUp />} />
       </Routes>
     </div>
   );
