@@ -61,6 +61,7 @@
   transition: background 0.3s;
   width: 100%;
   max-width: 500px;
+  margin-top: 8px;
 }
 
 .product-review-button:hover {

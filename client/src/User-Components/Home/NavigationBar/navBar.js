@@ -56,6 +56,7 @@ function NavScrollExample() {
               </NavDropdown>
               <Nav.Link as={Link} to="/Cart">
                 Cart Section
+                <span class="badge bg-danger">10</span>
               </Nav.Link>
               <Nav.Link as={Link} to="/OrderPage">
                 Order Section

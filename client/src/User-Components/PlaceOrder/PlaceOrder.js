@@ -10,43 +10,70 @@ function PlaceOrder({ user, totalAmount }) {
     paymentMethod: "cod",
   });
 
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (
+      !formData.address ||
+      !formData.pincode ||
+      !formData.mobile ||
+      !formData.place
+    ) {
+      setError("All fields are required.");
+      return;
+    }
+
+    setSuccessMessage(
+      "Your order has been placed successfully! We will deliver it very soon."
+    );
+
+    // Reset form except for payment method
+    setFormData({
+      address: "",
+      pincode: "",
+      mobile: "",
+      place: "",
+      paymentMethod: "cod",
+    });
+
+    setError("");
   };
 
   return (
     <div className="order-container">
-      <h2 className="order-header" style={{ color: "red" }}>
-        Checkout
-      </h2>
+      <h2 className="order-header">Checkout</h2>
+
+      {error && <p className="order-error">{error}</p>}
+      {successMessage && <p className="order-success">{successMessage}</p>}
+
       <form id="order-form" className="order-form" onSubmit={handleSubmit}>
         <div className="order-row">
           {/* Delivery Details */}
           <div className="order-column">
             <div className="shipping-card">
-              <h4 className="card-title" style={{ color: "red" }}>
-                Delivery Details
-              </h4>
-              <br />
-              <br />
-              <input type="hidden" name="userId" value={user?._id} />
+              <h4 className="card-title">Delivery Details</h4>
+              <input type="hidden" name="userId" value={user?._id || ""} />
+
               <div className="form-group">
                 <label htmlFor="address">Address</label>
                 <textarea
                   className="form-input"
                   id="address"
-                  rows="3"
                   name="address"
                   placeholder="Enter your address"
                   value={formData.address}
                   onChange={handleChange}
+                  required
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="pincode">Pincode</label>
                 <input
@@ -57,8 +84,10 @@ function PlaceOrder({ user, totalAmount }) {
                   placeholder="Enter your pincode"
                   value={formData.pincode}
                   onChange={handleChange}
+                  required
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="mobile">Mobile Number</label>
                 <input
@@ -69,8 +98,10 @@ function PlaceOrder({ user, totalAmount }) {
                   placeholder="Enter your mobile number"
                   value={formData.mobile}
                   onChange={handleChange}
+                  required
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="place">Place</label>
                 <input
@@ -81,6 +112,7 @@ function PlaceOrder({ user, totalAmount }) {
                   placeholder="Enter your place"
                   value={formData.place}
                   onChange={handleChange}
+                  required
                 />
               </div>
             </div>
@@ -89,19 +121,14 @@ function PlaceOrder({ user, totalAmount }) {
           {/* Payment Details */}
           <div className="order-column">
             <div className="billing-card">
-              <h4 className="card-title" style={{ color: "red" }}>
-                Total Amount :<span style={{ color: "green" }}>RS:-1000 </span>{" "}
+              <h4 className="card-title">
+                Total Amount:{" "}
+                <span className="total-amount">RS: {totalAmount}</span>
               </h4>
-              <br />
 
               <div className="form-group">
-                <br />
-                <label style={{ color: "black" }}>
-                  <b>
-                    <u>Payment Method</u>
-                  </b>
-                </label>
-                <br />
+                <label className="payment-method-title">Payment Method</label>
+
                 <div className="radio-group">
                   <input
                     className="radio-input"
@@ -114,6 +141,7 @@ function PlaceOrder({ user, totalAmount }) {
                   />
                   <label htmlFor="cod">Cash on Delivery (COD)</label>
                 </div>
+
                 <div className="radio-group">
                   <input
                     className="radio-input"
@@ -127,6 +155,7 @@ function PlaceOrder({ user, totalAmount }) {
                   <label htmlFor="online">Online Payment</label>
                 </div>
               </div>
+
               <button className="order-button" type="submit">
                 Proceed to Payment
               </button>
