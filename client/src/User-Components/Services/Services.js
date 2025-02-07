@@ -32,8 +32,15 @@ function Services() {
           </Link>
         </div>
         <div className="service-container">
-          <h3 className="service-heading">Return and Refunds</h3>
-          <p style={{ textAlign: "center" }}>Return or exchange your product</p>
+          <Link
+            to="/Return&Refund"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <h3 className="service-heading">Return and Refunds</h3>
+            <p style={{ textAlign: "center" }}>
+              Return or exchange your product
+            </p>
+          </Link>
         </div>
         <div className="service-container">
           <Link
@@ -54,8 +61,13 @@ function Services() {
           </Link>
         </div>
         <div className="service-container">
-          <h3 className="service-heading">Account Settings</h3>
-          <p style={{ textAlign: "center" }}>Change your name,email </p>
+          <Link
+            to="/ContactUs"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <h3 className="service-heading">Connect with us</h3>
+            <p style={{ textAlign: "center" }}>For customer support</p>
+          </Link>
         </div>
         <div className="service-container">
           <Link to="/news" style={{ color: "inherit", textDecoration: "none" }}>
