@@ -28,10 +28,14 @@
   align-items: center;
 }
 
-.reviewer-name {
-  font-size: 1.2rem;
+.productReviewer-name {
+  font-size: 1.9rem;
   font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin-bottom: 10px;
+  display: flex;
+  color: rgb(169, 85, 0);
 }
 
 .product-review-textarea {

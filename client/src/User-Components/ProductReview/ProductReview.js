@@ -21,7 +21,7 @@ const ProductReview = () => {
       </h2>
       <br />
       <form onSubmit={handleSubmit} className="product-review-form">
-        <h4 style={{ color: "red" }}>Aslam Youseph</h4>
+        <h4 className="productReviewer-name">Aslam Youseph</h4>
         <textarea
           placeholder="Write your review..."
           onChange={(e) => setReview(e.target.value)}
