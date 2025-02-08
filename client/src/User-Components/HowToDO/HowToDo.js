@@ -1,6 +1,8 @@
 import React from "react";
 import "./HowToDO.css";
 import image1 from "../User-images/laptop35.webp";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+
 function HowToDo() {
   return (
     <div>
@@ -37,9 +39,15 @@ function HowToDo() {
             <img src={image1} alt="Card Image" />
           </div>
           <div className="card-content">
-            <h5 className="card-title">
-              How to Build a PC: The Ultimate Beginner's Guide
-            </h5>
+            <Link
+              to="/HowToDoDetails"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <h5 className="card-title">
+                How to Build a PC: The Ultimate Beginner's Guide
+              </h5>
+            </Link>
+
             <p className="card-text">
               PC building is infinitely varied, so no guide can cover every
               scenario. But we'll cover the most common issues you'll face
@@ -67,9 +75,15 @@ function HowToDo() {
             <img src={image1} alt="Card Image" />
           </div>
           <div className="card-content">
-            <h5 className="card-title">
-              How to Build a PC: The Ultimate Beginner's Guide
-            </h5>
+            <Link
+              to="/HowToDoDetails"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <h5 className="card-title">
+                How to Build a PC: The Ultimate Beginner's Guide
+              </h5>
+            </Link>
+
             <p className="card-text">
               PC building is infinitely varied, so no guide can cover every
               scenario. But we'll cover the most common issues you'll face
@@ -97,9 +111,15 @@ function HowToDo() {
             <img src={image1} alt="Card Image" />
           </div>
           <div className="card-content">
-            <h5 className="card-title">
-              How to Build a PC: The Ultimate Beginner's Guide
-            </h5>
+            <Link
+              to="/HowToDoDetails"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <h5 className="card-title">
+                How to Build a PC: The Ultimate Beginner's Guide
+              </h5>
+            </Link>
+
             <p className="card-text">
               PC building is infinitely varied, so no guide can cover every
               scenario. But we'll cover the most common issues you'll face
@@ -127,9 +147,15 @@ function HowToDo() {
             <img src={image1} alt="Card Image" />
           </div>
           <div className="card-content">
-            <h5 className="card-title">
-              How to Build a PC: The Ultimate Beginner's Guide
-            </h5>
+            <Link
+              to="/HowToDoDetails"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <h5 className="card-title">
+                How to Build a PC: The Ultimate Beginner's Guide
+              </h5>
+            </Link>
+
             <p className="card-text">
               PC building is infinitely varied, so no guide can cover every
               scenario. But we'll cover the most common issues you'll face

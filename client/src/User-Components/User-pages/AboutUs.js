@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../../User-Components/Home/footer/footer";
-import NavBar from "../../User-Components/Home/NavigationBar/navBar";
-import SearchBar from "../../User-Components/Home/SearchBar/searchBar";
+import Footer from "../Home/footer/footer";
+import NavBar from "../Home/NavigationBar/navBar";
+import SearchBar from "../Home/SearchBar/searchBar";
 import About from "../AboutUs/AboutUs";
 
 function AboutUs() {

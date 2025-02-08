@@ -21,6 +21,8 @@ import PlaceOrder from "./User-Components/User-pages/PlaceOrder";
 import SignUp from "./User-Components/User-pages/SignUp";
 import Login from "./User-Components/User-pages/login";
 import Return_Refund from "./User-Components/User-pages/Return_Refund";
+import NewsDetails from "./User-Components/User-pages/NewsDetails";
+import HowToDoDetails from "./User-Components/User-pages/HowToDoDetails";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -60,6 +62,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Return&Refund" element={<Return_Refund />} />
+        <Route path="/NewsDetails" element={<NewsDetails />} />
+        <Route path="/HowToDoDetails" element={<HowToDoDetails />} />
       </Routes>
     </div>
   );

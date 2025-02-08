@@ -42,12 +42,18 @@
   color: #555;
 }
 
-.card-footer {
-  background-color: #f8f9fa;
-  padding: 10px 15px;
-  text-align: left;
-  font-size: 12px;
-  color: #6c757d;
+.card-footer button {
+  background-color: #ff0000;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: #fff7f7;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-bottom: 2%;
+}
+.card-footer button:hover {
+  background-color: #ffffff;
+  color: #ff0000;
 }
 
 .text-body-secondary {
