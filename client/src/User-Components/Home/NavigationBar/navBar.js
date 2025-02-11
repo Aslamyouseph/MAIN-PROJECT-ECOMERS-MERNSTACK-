@@ -3,14 +3,42 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Dropdown from "react-bootstrap/Dropdown";
-import lappora from "../../User-images/lappora_icon.png"; // importing the logo image
-import { Routes, Route, Link, useNavigate } from "react-router-dom"; // This is used to enable routing.
+import lappora from "../../User-images/lappora_icon.png"; // Importing the logo image
+import { Routes, Route, Link, useNavigate } from "react-router-dom"; // Enable routing
+import { useState } from "react";
 import "./navBar.css";
 
 function NavScrollExample() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate(); //
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/api/user/logout", {
+        method: "POST", // Ensure your backend supports this method
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (res.ok) {
+        localStorage.removeItem("user"); // Remove user from localStorage
+        setIsLoggedIn(false); // Update state
+        navigate("/login"); // Redirect to login page
+      } else {
+        alert("Logout failed. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary ">
+      <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Nav.Link as={Link} to="/">
             <img
@@ -55,8 +83,7 @@ function NavScrollExample() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} to="/Cart">
-                Cart Section
-                <span class="badge bg-danger">10</span>
+                Cart Section <span className="badge bg-danger">10</span>{" "}
               </Nav.Link>
               <Nav.Link as={Link} to="/OrderPage">
                 Order Section
@@ -74,8 +101,9 @@ function NavScrollExample() {
                 About Us
               </Nav.Link>
               <Nav.Link as={Link} to="/ContactUs">
-                ContactUs
+                Contact Us
               </Nav.Link>
+
               <Dropdown className="Account-dropdown">
                 <Dropdown.Toggle
                   variant="success"
@@ -88,7 +116,8 @@ function NavScrollExample() {
                   <Dropdown.Item as={Link} to="/login">
                     Login
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+
+                  <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
