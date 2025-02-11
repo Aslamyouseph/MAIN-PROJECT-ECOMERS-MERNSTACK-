@@ -58,7 +58,7 @@ router.post("/login", (req, res) => {
       req.session.userLoggedIn = true;
       // let user = req.session.user;
       // console.log("user details from the session after login:", user);
-      console.log("Session after login:", req.session);
+      // console.log("Session after login:", req.session);
       // Respond back with success
       res.status(200).json({
         success: true,
@@ -84,7 +84,6 @@ router.post("/logout", (req, res) => {
         .json({ success: false, message: "Failed to log out" });
     }
     res.clearCookie("connect.sid", { path: "/" }); // Ensure the cookie is cleared
-    console.log("Session after logout:", req.session);
 
     return res
       .status(200)
