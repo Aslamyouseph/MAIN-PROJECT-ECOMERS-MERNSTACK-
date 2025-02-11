@@ -82,6 +82,23 @@
   font-weight: bold;
   transition: color 0.3s;
 }
+/* Success & Error Messages */
+.success-message {
+  color: #09b02d;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
 .signup-container .login-link:hover {
   color: #8e44ad;
