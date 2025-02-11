@@ -10,47 +10,60 @@ function SignUp() {
     password: "",
     confirmPassword: "",
   });
-
+  const [error, setError] = useState(""); // Added error state
+  const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate(); // Navigation function
 
   const handleChange = (e) => {
-    // trim() => Remove whitespace from input
     setFormData({ ...formData, [e.target.name]: e.target.value.trim() });
+  };
+
+  // Validation function
+  const validateForm = () => {
+    const { name, email, phone, password, confirmPassword } = formData;
+
+    if (!name || !email || !phone || !password || !confirmPassword) {
+      setError("All fields are required.");
+      return false;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match!");
+      return false;
+    }
+
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+      setError("Please enter a valid 10-digit phone number.");
+      return false;
+    }
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long.");
+      return false;
+    }
+
+    setError(""); // Clear error if validation passes
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate Password Match
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-
-    // Validate Phone Number
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(formData.phone)) {
-      alert("Please enter a valid 10-digit phone number.");
-      return;
-    }
-
-    // Validate Password Length
-    if (formData.password.length < 6) {
-      alert("Password must be at least 6 characters long.");
-      return;
-    }
+    if (!validateForm()) return; // Run validation
 
     try {
+      const { confirmPassword, ...sendData } = formData; // Remove confirmPassword before sending
       const res = await fetch("http://localhost:5000/api/user/signup", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(sendData),
       });
       const data = await res.json();
 
       if (res.ok) {
-        alert("Signup Successful!");
+        setSuccessMessage("Signup successful!");
         setFormData({
           name: "",
           email: "",
@@ -60,11 +73,11 @@ function SignUp() {
         });
         navigate("/"); // Navigate to home page
       } else {
-        alert(data.message || "Signup failed. Try again.");
+        setError(data.message || "Signup failed. Try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Something went wrong. Please try again.");
+      setError("Something went wrong. Please try again.");
     }
   };
 
@@ -75,6 +88,12 @@ function SignUp() {
       <br />
       <div className="signup-container">
         <h2>SignUp</h2>
+        {error && <p className="error-message">{error}</p>}{" "}
+        {/* Displays errors */}
+        {successMessage && (
+          <p className="success-message">{successMessage}</p>
+        )}{" "}
+        {/* Displays success message */}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -98,7 +117,7 @@ function SignUp() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Enter your number"
-            pattern="[0-9]{10}" // Ensures only 10-digit numbers
+            pattern="[0-9]{10}"
             required
           />
           <input
