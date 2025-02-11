@@ -77,7 +77,7 @@ function SignUp() {
           password: "",
           confirmPassword: "",
         });
-        navigate("/"); // Navigate to home page
+        setTimeout(() => navigate("/"), 1000); // Navigate after 1s delay
       } else {
         setError(data.message || "Signup failed. Try again.");
       }
