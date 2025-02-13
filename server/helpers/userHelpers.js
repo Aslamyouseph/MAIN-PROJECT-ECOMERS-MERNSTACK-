@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const UserModel = require("../DB-Models/userAccount");
+const ContactModel = require("../DB-Models/contactUser");
 
 module.exports = {
   // used for the signup operation
@@ -51,6 +52,17 @@ module.exports = {
       } catch (error) {
         console.error("Error during login:", error);
         reject({ status: false, message: "Login error occurred" });
+      }
+    });
+  },
+  doContact: (contactData) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const newContact = new ContactModel(contactData);
+        const result = await newContact.save(); // Save to database
+        resolve({ user: result });
+      } catch (error) {
+        reject(error);
       }
     });
   },

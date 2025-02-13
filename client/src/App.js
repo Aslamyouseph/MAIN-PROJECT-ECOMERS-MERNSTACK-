@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; //This us used to connect the frontend to the backend
 import { Routes, Route, Link, useNavigate } from "react-router-dom"; // This is used to enable routing.
+// User Routes
 import Home from "./User-Components/User-pages/home"; // This is used to import the home page from the pages folder
 import About from "./User-Components/User-pages/AboutUs"; // This is used to import the About us page from the pages folder
 import HowToDO from "./User-Components/User-pages/HowToDO";
@@ -23,7 +24,8 @@ import Login from "./User-Components/User-pages/login";
 import Return_Refund from "./User-Components/User-pages/Return_Refund";
 import NewsDetails from "./User-Components/User-pages/NewsDetails";
 import HowToDoDetails from "./User-Components/User-pages/HowToDoDetails";
-
+// Admin routes
+import AdminHome from "./Admin-Components/Admin-page/Home";
 function App() {
   // const [data, setData] = useState(null);
 
@@ -42,6 +44,7 @@ function App() {
   return (
     <div>
       <Routes>
+        {/*User Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/HowToDO" element={<HowToDO />} />
@@ -64,6 +67,8 @@ function App() {
         <Route path="/Return&Refund" element={<Return_Refund />} />
         <Route path="/NewsDetails" element={<NewsDetails />} />
         <Route path="/HowToDoDetails" element={<HowToDoDetails />} />
+        {/*Admin Routes */}
+        <Route path="/AdminHome" element={<AdminHome />} />
       </Routes>
     </div>
   );

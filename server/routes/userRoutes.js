@@ -2,6 +2,15 @@ const express = require("express");
 const router = express.Router();
 const userHelpers = require("../helpers/userHelpers");
 
+// TODO:checking the user is logged or not . if the user is logged then it sent the true message otherwise  sent false
+router.get("/checksection", (req, res) => {
+  if (req.session.user) {
+    return res.status(200).json({ isLoggedIn: true, user: req.session.user });
+  } else {
+    return res.status(200).json({ isLoggedIn: false });
+  }
+});
+
 // Signup operation
 router.post("/signup", async (req, res) => {
   try {
@@ -89,6 +98,36 @@ router.post("/logout", (req, res) => {
       .status(200)
       .json({ success: true, message: "Logged out successfully" });
   });
+});
+
+// contact form operation
+
+router.post("/contact", async (req, res) => {
+  try {
+    // console.log("Contact request came here");
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required!",
+      });
+    }
+
+    const response = await userHelpers.doContact(req.body);
+    // console.log("Contact response:", response);
+    res.status(200).json({
+      success: true,
+      message:
+        "Your request has been submitted successfully! Our staff will contact you very soon.",
+    });
+  } catch (error) {
+    console.error("Contact error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Contact failed!",
+      error: error.message,
+    });
+  }
 });
 
 module.exports = router;
