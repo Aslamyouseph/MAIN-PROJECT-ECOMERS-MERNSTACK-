@@ -11,6 +11,7 @@ import "./navBar.css";
 
 function NavScrollExample() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [sessionName, setSessionName] = useState("");
   const navigate = useNavigate();
   // TODO:This section is used to check the user is logged or not
   useEffect(() => {
@@ -22,6 +23,10 @@ function NavScrollExample() {
         });
 
         const data = await res.json();
+        // Storing the session user name in to a state
+        setSessionName(data.user.name);
+        // console.log("data", data);
+        // console.log("data Name", data.user.name);
         if (data.isLoggedIn) {
           setIsLoggedIn(true);
         } else {
@@ -48,7 +53,6 @@ function NavScrollExample() {
 
       if (res.ok) {
         localStorage.removeItem("user"); // Remove user from localStorage
-        // setIsLoggedIn(false); // Update state
         navigate("/login"); // Redirect to login page
       } else {
         alert("Logout failed. Please try again.");
@@ -137,8 +141,10 @@ function NavScrollExample() {
                   id="dropdown-basic"
                   className="custom-dropdown"
                 >
-                  Account
+                  {/* If there is a user logged then the name will display otherwise Account will display */}
+                  {isLoggedIn ? sessionName : "Account"}
                 </Dropdown.Toggle>
+
                 <Dropdown.Menu>
                   {/* This is used to dynamically display the login or the logout button */}
                   {!isLoggedIn ? (
