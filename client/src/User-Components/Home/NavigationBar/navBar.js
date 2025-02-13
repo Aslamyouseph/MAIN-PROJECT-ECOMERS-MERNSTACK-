@@ -6,12 +6,34 @@ import Dropdown from "react-bootstrap/Dropdown";
 import lappora from "../../User-images/lappora_icon.png"; // Importing the logo image
 import { Routes, Route, Link, useNavigate } from "react-router-dom"; // Enable routing
 import { useState } from "react";
+import { useEffect } from "react";
 import "./navBar.css";
 
 function NavScrollExample() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate(); //
+  const navigate = useNavigate();
+  // TODO:This section is used to check the user is logged or not
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/user/checksection", {
+          method: "GET",
+          credentials: "include", // Ensure cookies are sent
+        });
 
+        const data = await res.json();
+        if (data.isLoggedIn) {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (error) {
+        console.error("Error checking login status:", error);
+      }
+    };
+
+    checkLoginStatus();
+  }, []);
   const handleLogout = async (e) => {
     e.preventDefault();
 
@@ -26,7 +48,7 @@ function NavScrollExample() {
 
       if (res.ok) {
         localStorage.removeItem("user"); // Remove user from localStorage
-        setIsLoggedIn(false); // Update state
+        // setIsLoggedIn(false); // Update state
         navigate("/login"); // Redirect to login page
       } else {
         alert("Logout failed. Please try again.");
@@ -82,12 +104,17 @@ function NavScrollExample() {
                   2 in one
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={Link} to="/Cart">
-                Cart Section <span className="badge bg-danger">10</span>{" "}
-              </Nav.Link>
-              <Nav.Link as={Link} to="/OrderPage">
-                Order Section
-              </Nav.Link>
+              {/* TODO:The cart and the orderSection is only visible for the logged users */}
+              {isLoggedIn && (
+                <>
+                  <Nav.Link as={Link} to="/Cart">
+                    Cart Section <span className="badge bg-danger">10</span>
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/OrderPage">
+                    Order Section
+                  </Nav.Link>
+                </>
+              )}
               <Nav.Link as={Link} to="/news">
                 News
               </Nav.Link>
@@ -113,11 +140,14 @@ function NavScrollExample() {
                   Account
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item as={Link} to="/login">
-                    Login
-                  </Dropdown.Item>
-
-                  <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+                  {/* This is used to dynamically display the login or the logout button */}
+                  {!isLoggedIn ? (
+                    <Dropdown.Item as={Link} to="/login">
+                      Login
+                    </Dropdown.Item>
+                  ) : (
+                    <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+                  )}
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
