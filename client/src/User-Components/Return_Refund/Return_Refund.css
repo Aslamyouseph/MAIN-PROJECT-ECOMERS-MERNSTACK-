@@ -22,7 +22,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 22px;
   font-weight: bold;
-  color: #cc0404;
+  color: #0c042c;
   margin-bottom: 15px;
 }
 
@@ -68,7 +68,7 @@
 /* Error & Success Messages */
 .return-refund-error {
   color: red;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .return-refund-success {
