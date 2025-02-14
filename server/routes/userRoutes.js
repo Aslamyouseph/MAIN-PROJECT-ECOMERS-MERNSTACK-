@@ -2,14 +2,30 @@ const express = require("express");
 const router = express.Router();
 const userHelpers = require("../helpers/userHelpers");
 
-// TODO:checking the user is logged or not . if the user is logged then it sent the true message otherwise  sent false
+// TODO:checking the user is logged or not .This block is used to check the user is logged or not when the control is came from the frontend
 router.get("/checksection", (req, res) => {
+  // console.log("Session after checksection:", req.session.user);
   if (req.session.user) {
     return res.status(200).json({ isLoggedIn: true, user: req.session.user });
   } else {
     return res.status(200).json({ isLoggedIn: false });
   }
 });
+
+/* TODO:checking the user is logged or not .This block is used to check the user is logged or not when the control is came from the Backend itself
+ In here if the user is logged then the next() will work  . if the user is not logged then the "success: false" perform and the control will goes to the catch block*/
+const verifyLogin = (req, res, next) => {
+  // console.log("Session after verifyLogin:", req.session.userLoggedIn);
+  if (req.session.userLoggedIn === true) {
+    next();
+  } else {
+    // Return JSON with a 401 status instead of redirecting
+    res.status(401).json({
+      success: false,
+      message: "User is not logged in. Please log in to continue.",
+    });
+  }
+};
 
 // Signup operation
 router.post("/signup", async (req, res) => {
@@ -24,6 +40,7 @@ router.post("/signup", async (req, res) => {
       password: response.user.password,
     };
     req.session.userLoggedIn = true;
+    // console.log("Session after signup:", req.session.userLoggedIn);
 
     // Save the session data before responding
     req.session.save((err) => {
@@ -65,6 +82,7 @@ router.post("/login", (req, res) => {
         password: response.user.password,
       };
       req.session.userLoggedIn = true;
+      // console.log("Session after login:", req.session.userLoggedIn);
       // let user = req.session.user;
       // console.log("user details from the session after login:", user);
       // console.log("Session after login:", req.session);
@@ -92,8 +110,7 @@ router.post("/logout", (req, res) => {
         .status(500)
         .json({ success: false, message: "Failed to log out" });
     }
-    res.clearCookie("connect.sid", { path: "/" }); // Ensure the cookie is cleared
-
+    res.clearCookie("connect.sid", { path: "/" });
     return res
       .status(200)
       .json({ success: true, message: "Logged out successfully" });
@@ -102,9 +119,8 @@ router.post("/logout", (req, res) => {
 
 // contact form operation
 
-router.post("/contact", async (req, res) => {
+router.post("/contact", verifyLogin, async (req, res) => {
   try {
-    // console.log("Contact request came here");
     const { name, email, message } = req.body;
     if (!name || !email || !message) {
       return res.status(400).json({
@@ -112,9 +128,7 @@ router.post("/contact", async (req, res) => {
         message: "All fields are required!",
       });
     }
-
-    const response = await userHelpers.doContact(req.body);
-    // console.log("Contact response:", response);
+    await userHelpers.doContact(req.body);
     res.status(200).json({
       success: true,
       message:
