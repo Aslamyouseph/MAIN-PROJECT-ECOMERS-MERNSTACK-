@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./contactForm.css";
 
 function ContactForm() {
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -22,6 +22,7 @@ function ContactForm() {
     setError(""); // Clear errors on input change
   };
 
+  // Validate form fields
   const validateForm = () => {
     const { name, email, message } = formData;
 
@@ -36,7 +37,7 @@ function ContactForm() {
       return false;
     }
 
-    setError(""); // Clear error if validation passes
+    setError("");
     return true;
   };
 
@@ -44,15 +45,26 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return; // Run validation
+    if (!validateForm()) return;
 
     try {
       const res = await fetch("http://localhost:5000/api/user/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include", // Ensures cookies are sent
         body: JSON.stringify(formData),
       });
+
+      // Parse JSON response before using it
       const data = await res.json();
+
+      // TODO:If user is not logged in then this block of code will work
+      if (res.status === 401) {
+        setError(data.message || "To contact us you need to log in.");
+        // Redirect to the login page after 5 seconds
+        setTimeout(() => navigate("/login"), 5000);
+        return;
+      }
 
       if (res.ok) {
         setSuccessMessage(
@@ -60,7 +72,7 @@ function ContactForm() {
         );
         setFormData({ name: "", email: "", message: "" });
 
-        // Redirect after success
+        // Redirect after success (change the route if needed)
         setTimeout(() => navigate("/"), 3000);
       } else {
         setError(data.message || "Something went wrong. Please try again.");
