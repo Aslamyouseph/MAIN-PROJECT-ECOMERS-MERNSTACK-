@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const UserModel = require("../DB-Models/userAccount");
 const ContactModel = require("../DB-Models/contactUser");
+const ReturnRefundModel = require("../DB-Models/ReturnRefund");
 
 module.exports = {
   // used for the signup operation
@@ -60,6 +61,18 @@ module.exports = {
       try {
         const newContact = new ContactModel(contactData);
         const result = await newContact.save(); // Save to database
+        resolve({ user: result });
+      } catch (error) {
+        reject(error);
+      }
+    });
+  },
+  //Return and refund operations
+  doReturnRefund: (doReturnRefundData) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const newReturnRefund = new ReturnRefundModel(doReturnRefundData);
+        const result = await newReturnRefund.save(); // Fixed the variable name
         resolve({ user: result });
       } catch (error) {
         reject(error);

@@ -144,4 +144,44 @@ router.post("/contact", verifyLogin, async (req, res) => {
   }
 });
 
+//ReturnRefund operations
+
+router.post("/returnRefund", verifyLogin, async (req, res) => {
+  try {
+    const { orderId, phone, reason } = req.body;
+
+    // Validate input fields
+    if (!orderId || !phone || !reason) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required!",
+      });
+    }
+    try {
+      await userHelpers.doReturnRefund(req.body);
+    } catch (dbError) {
+      console.error("Database error:", dbError);
+      return res.status(500).json({
+        success: false,
+        message: "Failed to process your request. Please try again later.",
+      });
+    }
+    // Success response
+    res.status(200).json({
+      success: true,
+      message:
+        "Your request has been submitted successfully! Our support team will review your request and get back to you shortly.",
+    });
+  } catch (error) {
+    console.error("Unexpected error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong while processing your request!",
+      error: error.message,
+    });
+  }
+});
+
+module.exports = router;
+
 module.exports = router;
